@@ -1,0 +1,17 @@
+/ {
+    // Dead key for acute accent (á, é, í, ó, ú, ý)
+    acute_dead: acute_dead {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp GRAVE>, <&kp ACUTE>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+    
+    // Dead key for caron (č, ď, ě, ň, ř, š, ť, ž)
+    caron_dead: caron_dead {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp TILDE>, <&kp CARET>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+};
